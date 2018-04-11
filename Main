@@ -1,9 +1,62 @@
-Class 
+from random import *
+from Tkinter import *
 
-if button = (Shoulders):
+class MainGUI(Frame):
+    # the constructor
+    def __init__(self, parent):
+        Frame.__init__(self, parent, bg="white")
+        parent.attributes("-fullscreen", False)
+        self.setupGUI()
+        
+     def process(self, button):
+        if (button == "Shoulders"):
+            # clear the display
+            self.display["text"] = ""
+
+Class Workout(object)
+  def __init__(self, group, set, rep)
+    self.group = group
+    self.set = set
+    self.rep = rep
   
+  	#accessor
+	@property
+	def group(self):
+		return self._group
+	#mutator
+	@group.setter
+	def year(self, group):
+		self._group = group
+	#accessor
+	@property
+	def set(self):
+		return self._set
+	#setter
+	@set.setter
+	def set(self, set):
+		self._set = set
+	#accessor
+	@property
+	def rep(self):
+		return self._rep
+	#setter
+	@rep.setter
+	def rep(self, rep):
+		self._rep = rep
 Abs
 Chest
 Back
 Legs
 Arms
+##############################
+# create the window
+window = Tk()
+
+# set the window title
+window.title("The Workout Generator")
+
+# generate the GUI
+p = MainGUI(window)
+
+# display the GUI and wait for user interaction
+window.mainloop()
