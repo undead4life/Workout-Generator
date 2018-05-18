@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+	<title>Get Big Calculator</title>
+<head>
+		    <link rel="stylesheet"
+      			href= "Styles/Getbig.css"
+       			 type= "text/css">	
+</head>
+
+<body>
+	<header>
+		<h1>Get Big Calculator</h1>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href= "index.html">Home</a></li>
+			<li><a href= "Workout Library.html">Workout Library</a></li>
+			<li><a href= "How it Works.html">How it Works</a></li>
+		</ul>
+	</nav><br>
+
+	<article>
+		<p></p>
+		<p></p>
+		<p></p>
+
+		<script>
+		var Typecounter = 0
+		var Sclickcounter = 0, Biclickcounter = 0, Triclickcounter = 0, Cclickcounter = 0, Absclickcounter = 0, Legsclickcounter = 0, Backclickcounter = 0
+		var S = [" Dumbbell Shoulder Press", " Upright Barbell Row", " Seated Bent-Over Rear Delt Raise", " Side Lateral Raise", " Upright Cable Row", " Seated Barbell Military Press", " Front Cable Raise", " Incline Bench Press", " Front Two-Dumbbell Raise", " Seated Dumbbell Press"];
+		var Bi = [" Seated Bicep Curl", " Hammer Curl", " Incline Inner Biceps Curl", " EZ Bar Curl", " Wide Grip Standing Barbell Curl", " Dumbbell Biceps Curl", " Overhead Cable Curl", " Preacher Curl", " Concentration Dumbbell Curl", " Standing Cable Curl"]
+		var Tri = [" Skull Crusher", " Weighted Dip", " Tricep Dip Machine", " Seated Overhead Dumbbell Extension", " Cable Overhead Extension", " Cable Pushdown", " Close Grip Bench Press", " Tricep Dumbbell Kickback", " Standing Overhead Barbell Tricep Extension", " Standing One Arm Dumbbell Tricep Extension"]
+		var C = [" Bench Press", " Low-Incline Bench Press", " Seated Machine Chest Press", " Chest Dip", " Incline Bench Cable Fly", " Chest Fly", " Push-Ups", " Incline Bench Press", " Decline Dumbbell Press", " Incline Dumbbell Fly"]
+		var Abs = [" Sit Up", " Flat Bench Leg Raise", " Jackknife Sit Up", " Toe Touchers", " Crunches", " Ab Wheel Rollout", " Russian Twist", " Flutter Kick", " Horizontal Cable Woodchop", " Mountain Climber"]
+		var Legs = [" Back Squat", " Bulgarian Split Squat", " Deadlift", " Single Leg Romanian Deadlift", " Leg Press", " Walking Lunge", " Kettlebell Swing", " Box Jump", " Barbell Hip Thrust", " Calf Raise"]
+		var Back = [" Bent Over Barbell Deadlift", " Wide Grip Pull Up", " Standing T-Bar Row", " Wide Grip Seated Cable Row", " Close Grip Pull Down", " Single Arm Dumbbell Row", " Decline Bench Dumbbell Pullover", " Single Arm Cable Row", " Lying Lateral Raise", " Power Clean"]
+
+
+
+
+		function ChooseShoulders() {
+		    YourS = [S[Math.floor(Math.random() * 10)], S[Math.floor(Math.random() * 10)], S[Math.floor(Math.random() * 10)], S[Math.floor(Math.random() * 10)]]
+		    if (Typecounter <2){
+		    	document.getElementById("S").innerHTML = YourS;
+				document.getElementById("Image").src="Images/shoulders.jpg";
+		    	if (Biclickcounter>0){
+				document.getElementById("Image").src="Images/biceps-shoulders.jpg";
+				}
+				if (Triclickcounter>0){
+					document.getElementById("Image").src="Images/triceps-shoulders.jpg";
+				}
+				if (Cclickcounter>0){
+					document.getElementById("Image").src="Images/chest-shoulders.jpg";
+				}
+				if (Absclickcounter>0){
+					document.getElementById("Image").src="Images/abs-shoulders.jpg";
+				}
+				if (Legsclickcounter>0){
+					document.getElementById("Image").src="Images/legs-shoulders.jpg";
+				}
+				if (Backclickcounter>0){
+					document.getElementById("Image").src="Images/back-shoulders.jpg";
+				}
+		    }
+		    if (Sclickcounter<1){
+		    	Typecounter += 1
+		    }
+		    Sclickcounter+=1
+		}
+		function ChooseBiceps() {
+		    YourBi = [Bi[Math.floor(Math.random() * 10)], Bi[Math.floor(Math.random() * 10)], Bi[Math.floor(Math.random() * 10)], Bi[Math.floor(Math.random() * 10)]]
+		    if (Typecounter <2){
+		    	document.getElementById("Bi").innerHTML = YourBi;
+				document.getElementById("Image").src="Images/biceps.jpg";
+		    	if (Sclickcounter>0){
+				document.getElementById("Image").src="Images/biceps-shoulders.jpg";
+				}
+				if (Triclickcounter>0){
+					document.getElementById("Image").src="Images/biceps-triceps.jpg";
+				}
+				if (Cclickcounter>0){
+					document.getElementById("Image").src="Images/biceps-chest.jpg";
+				}
+				if (Absclickcounter>0){
+					document.getElementById("Image").src="Images/abs-biceps.jpg";
+				}
+				if (Legsclickcounter>0){
+					document.getElementById("Image").src="Images/biceps-legs.jpg";
+				}
+				if (Backclickcounter>0){
+					document.getElementById("Image").src="Images/back-biceps.jpg";
+				}
+		    }
+		    if (Biclickcounter<1){
+		    	Typecounter += 1
+		    }
+		    Biclickcounter+=1
+		}
+		function ChooseTriceps() {
+		    YourTri = [Tri[Math.floor(Math.random() * 10)], Tri[Math.floor(Math.random() * 10)], Tri[Math.floor(Math.random() * 10)], Tri[Math.floor(Math.random() * 10)]]
+		    if (Typecounter <3){
+		    	document.getElementById("Tri").innerHTML = YourTri;
+				document.getElementById("Image").src="Images/triceps.jpg";
+		    	if (Biclickcounter>0){
+				document.getElementById("Image").src="Images/biceps-triceps.jpg";
+				}
+				if (Sclickcounter>0){
+					document.getElementById("Image").src="Images/triceps-shoulders.jpg";
+				}
+				if (Cclickcounter>0){
+					document.getElementById("Image").src="Images/chest-triceps.jpg";
+				}
+				if (Absclickcounter>0){
+					document.getElementById("Image").src="Images/abs-triceps.jpg";
+				}
+				if (Legsclickcounter>0){
+					document.getElementById("Image").src="Images/legs-triceps.jpg";
+				}
+				if (Backclickcounter>0){
+					document.getElementById("Image").src="Images/back-triceps.jpg";
+				}
+		    }
+		    if (Triclickcounter<1){
+		    	Typecounter += 1
+		    }
+		    Triclickcounter+=1
+		}
+		function ChooseChest() {
+		    YourC = [C[Math.floor(Math.random() * 10)], C[Math.floor(Math.random() * 10)], C[Math.floor(Math.random() * 10)], C[Math.floor(Math.random() * 10)]]
+		    if (Typecounter <3){
+		    	document.getElementById("C").innerHTML = YourC;
+				document.getElementById("Image").src="Images/chest.jpg";
+		    	if (Biclickcounter>0){
+				document.getElementById("Image").src="Images/biceps-chest.jpg";
+				}
+				if (Triclickcounter>0){
+					document.getElementById("Image").src="Images/chest-triceps.jpg";
+				}
+				if (Sclickcounter>0){
+					document.getElementById("Image").src="Images/chest-shoulders.jpg";
+				}
+				if (Absclickcounter>0){
+					document.getElementById("Image").src="Images/abs-chest.jpg";
+				}
+				if (Legsclickcounter>0){
+					document.getElementById("Image").src="Images/chest-legs.jpg";
+				}
+				if (Backclickcounter>0){
+					document.getElementById("Image").src="Images/back-chest.jpg";
+				}
+		    }
+		    if (Cclickcounter<1){
+		    	Typecounter += 1
+		    }
+		    Cclickcounter+=1
+		}
+		function ChooseAbs() {
+		    YourAbs = [Abs[Math.floor(Math.random() * 10)], Abs[Math.floor(Math.random() * 10)], Abs[Math.floor(Math.random() * 10)], Abs[Math.floor(Math.random() * 10)]]
+		    if (Typecounter <3){
+		    	document.getElementById("Abs").innerHTML = YourAbs;
+		    }
+				document.getElementById("Image").src="Images/abs.jpg";
+		    	if (Biclickcounter>0){
+				document.getElementById("Image").src="Images/abs-biceps.jpg";
+				}
+				if (Triclickcounter>0){
+					document.getElementById("Image").src="Images/abs-triceps.jpg";
+				}
+				if (Cclickcounter>0){
+					document.getElementById("Image").src="Images/abs-chest.jpg";
+				}
+				if (Sclickcounter>0){
+					document.getElementById("Image").src="Images/abs-shoulders.jpg";
+				}
+				if (Legsclickcounter>0){
+					document.getElementById("Image").src="Images/abs-legs.jpg";
+				}
+				if (Backclickcounter>0){
+					document.getElementById("Image").src="Images/back-abs.jpg";
+				}
+		    if (Absclickcounter<1){
+		    	Typecounter += 1
+		    }
+		    Absclickcounter+=1
+		}
+		function ChooseLegs() {
+		    YourLegs = [Legs[Math.floor(Math.random() * 10)], Legs[Math.floor(Math.random() * 10)], Legs[Math.floor(Math.random() * 10)], Legs[Math.floor(Math.random() * 10)]]
+		    if (Typecounter <3){
+		    	document.getElementById("Legs").innerHTML = YourLegs;
+				document.getElementById("Image").src="Images/legs.jpg";
+		    	if (Biclickcounter>0){
+				document.getElementById("Image").src="Images/biceps-legs.jpg";
+				}
+				if (Triclickcounter>0){
+					document.getElementById("Image").src="Images/legs-triceps.jpg";
+				}
+				if (Cclickcounter>0){
+					document.getElementById("Image").src="Images/chest-legs.jpg";
+				}
+				if (Absclickcounter>0){
+					document.getElementById("Image").src="Images/abs-legs.jpg";
+				}
+				if (Sclickcounter>0){
+					document.getElementById("Image").src="Images/legs-shoulders.jpg";
+				}
+				if (Backclickcounter>0){
+					document.getElementById("Image").src="Images/back-legs.jpg";
+				}
+		    }
+		    if (Legsclickcounter<1){
+		    	Typecounter += 1
+		    }
+		    Legsclickcounter+=1
+		}
+		function ChooseBack() {
+		    YourBack = [Back[Math.floor(Math.random() * 10)], Back[Math.floor(Math.random() * 10)], Back[Math.floor(Math.random() * 10)], Back[Math.floor(Math.random() * 10)]]
+		    if (Typecounter <3){
+		    	document.getElementById("Back").innerHTML = YourBack;
+				document.getElementById("Image").src="Images/back.jpg";
+		    	if (Biclickcounter>0){
+				document.getElementById("Image").src="Images/back-biceps.jpg";
+				}
+				if (Triclickcounter>0){
+					document.getElementById("Image").src="Images/back-triceps.jpg";
+				}
+				if (Cclickcounter>0){
+					document.getElementById("Image").src="Images/back-chest.jpg";
+				}
+				if (Absclickcounter>0){
+					document.getElementById("Image").src="Images/back-abs.jpg";
+				}
+				if (Legsclickcounter>0){
+					document.getElementById("Image").src="Images/back-legs.jpg";
+				}
+				if (Sclickcounter>0){
+					document.getElementById("Image").src="Images/back-shoulders.jpg";
+				}
+		    }
+		    if (Backclickcounter<1){
+		    	Typecounter += 1
+		    }
+		    Backclickcounter+=1
+		}
+		</script>
+ 		<button onclick="ChooseShoulders()" class="button">Shoulders</button></p>
+ 		<img id= "Image" class="raisedright" src= "Images/empty.jpg">
+ 		<button onclick="ChooseBiceps()" class="button">Biceps</button></p>
+
+ 		<button onclick="ChooseTriceps()" class="button">Triceps</button></p>
+
+ 		<button onclick="ChooseChest()" class="button">Chest</button></p>
+
+ 		<button onclick="ChooseAbs()" class="button">Abs</button></p>
+
+ 		<button onclick="ChooseLegs()" class="button">Legs</button></p>
+
+ 		<button onclick="ChooseBack()" class="button">Back</button></p>
+ 		
+ 		<h1>Your Workout:</h1>
+
+ 		<p id="S"></p>
+ 		<p id="Bi"></p>
+ 		<p id="Tri"></p>
+ 		<p id="C"></p>
+ 		<p id="Abs"></p>
+ 		<p id="Legs"></p>
+ 		<p id="Back"></p>
+
+	</article>
+</body>
+</html>
